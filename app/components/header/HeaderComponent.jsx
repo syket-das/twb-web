@@ -6,7 +6,7 @@ const HeaderComponent = () => {
   return (
     <div
       className="navbar bg-base-300 h-20  
-     shadow-lg
+     shadow-lg w-screen
     "
     >
       <div className="mr-6 ">
