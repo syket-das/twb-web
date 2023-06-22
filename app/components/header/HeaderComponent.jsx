@@ -36,7 +36,7 @@ const HeaderComponent = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-52"
+            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-300 rounded-box w-52"
           >
             <li className="mt-2 ">
               <a className="justify-between py-2">Profile</a>
