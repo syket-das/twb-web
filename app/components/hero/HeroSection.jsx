@@ -12,7 +12,7 @@ const HeroSection = () => {
         >
           <img
             src="img/hero.gif"
-            className="  md:h-[500px] md:min-w-[
+            className="  md:h-[500px] md:min-w-[500px]
             object-cover object-center 
             "
           />
