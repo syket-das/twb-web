@@ -5,11 +5,7 @@ import { Logo } from './Logo';
 const HeaderComponent = () => {
   return (
     <div
-      className="navbar bg-base-300 h-20  
-     shadow-lg 
-
-      z-50
-    "
+      className="navbar bg-base-300 h-20 shadow-lg "
     >
       <div className="mr-6 ">
         <a className="btn bg-transparent normal-case text-xl" href="/">
@@ -32,7 +28,7 @@ const HeaderComponent = () => {
             className="input input-bordered  md:w-auto h-10 "
           />
         </div>
-        <div className="dropdown dropdown-end">
+        <div className="dropdown dropdown-end z-10">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img src="https://avatars.dicebear.com/api/avataaars/1.svg" />
