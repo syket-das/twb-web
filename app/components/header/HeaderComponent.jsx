@@ -23,7 +23,7 @@ const HeaderComponent = () => {
         </Link>
       </div>
       <div className="flex-none gap-2 ms-auto">
-        <div className="form-control ">
+        <div className="form-control hidden md:block">
           <input
             type="text"
             placeholder="Search for services"
