@@ -4,17 +4,21 @@ import { Logo } from './Logo';
 
 const HeaderComponent = () => {
   return (
-    <div className="navbar bg-base-300">
+    <div
+      className="navbar bg-base-300 h-20 sticky 
+    top-0 z-50 shadow-lg
+    "
+    >
       <div className="mr-6 ">
-        <a className="btn bg-transparent normal-case text-xl">
+        <a className="btn bg-transparent normal-case text-xl" href="/">
           <Logo /> TWB
         </a>
       </div>
       <div className=" hidden  gap-2 md:block">
-        <Link href="/services" className="btn btn-ghost">
+        <Link href="/" className="btn btn-ghost  h-10">
           Dashboard
         </Link>
-        <Link href="/services" className="btn btn-ghost">
+        <Link href="/services" className="btn btn-ghost  h-10">
           Find Services
         </Link>
       </div>
@@ -23,7 +27,7 @@ const HeaderComponent = () => {
           <input
             type="text"
             placeholder="Search for services"
-            className="input input-bordered  md:w-auto h-9 "
+            className="input input-bordered  md:w-auto h-10 "
           />
         </div>
         <div className="dropdown dropdown-end">
@@ -36,23 +40,23 @@ const HeaderComponent = () => {
             tabIndex={0}
             className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-200 rounded-box w-52"
           >
-            <li className="mt-2">
-              <a className="justify-between">Profile</a>
+            <li className="mt-2 ">
+              <a className="justify-between py-2">Profile</a>
             </li>
             <li className="mt-2">
-              <a className="justify-between" href="/">
+              <a className="justify-between py-2" href="/">
                 Dashboard
               </a>
             </li>
             <li className="mt-2">
-              <a className="justify-between" href="/services">
+              <a className="justify-between py-2" href="/services">
                 Find Services
               </a>
             </li>
 
             <div className="divider"></div>
             <li>
-              <a>Logout</a>
+              <a className="justify-between py-2">Logout</a>
             </li>
           </ul>
         </div>
