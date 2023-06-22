@@ -26,18 +26,27 @@ const FooterComponent = () => {
       </div>
       <div>
         <span className="footer-title">Newsletter</span>
-        <div className="form-control max-w-[95vw]">
+        <div className="form-control max-w-full">
           <label className="label">
             <span className="label-text">Enter your email address</span>
           </label>
           <div className="relative">
             <input
               type="text"
-              placeholder="your email address..."
+              placeholder="email..."
               className="input input-bordered w-full pr-16"
             />
             <button className="btn btn-neutral absolute top-0 right-0 rounded-l-none">
-              Subscribe
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              
             </button>
           </div>
         </div>

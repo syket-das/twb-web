@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <div className="hero bg-base-200 w-[100%] pt-7">
+    <div className="hero bg-base-200  pt-7">
       <div className="hero-content flex-col lg:flex-row-reverse justify-between">
         <div
           className=" min-h-[100%]"
@@ -24,14 +24,14 @@ const HeroSection = () => {
               bids from Freelancers within minutes.
             </p>
 
-            <div className="flex gap-4 items-center">
+            <div className="">
               <button className="btn btn-neutral h-[55px]">
                 Browse Services
               </button>
               <div className="stats shadow bg-transparent">
                 <div className="stat">
-                  <div className="stat-value">89,400</div>
-                  <div className="stat-title">Service Listed</div>
+                  <div className="stat-value ">89,400</div>
+                  <div className="stat-title ">Service Listed</div>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@ const HeroSection = () => {
               Start Freelancing and earn money by completing tasks and projects
               for clients.
             </p>
-            <div className="flex gap-4 items-center">
+            <div className="">
               <button className="btn btn-neutral h-[55px]">
                 Start Freelancing
               </button>
