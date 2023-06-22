@@ -5,8 +5,8 @@ import { Logo } from './Logo';
 const HeaderComponent = () => {
   return (
     <div
-      className="navbar bg-base-300 h-20 sticky 
-    top-0 z-50 shadow-lg
+      className="navbar bg-base-300 h-20  
+     shadow-lg
     "
     >
       <div className="mr-6 ">
