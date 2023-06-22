@@ -1,11 +1,15 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 
 const Partners = () => {
+  const [width, setWidth] = React.useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
   const settings = {
     infinite: true,
-    slidesToShow: `${window.innerWidth > 768 ? 7 : 3}`,
+    slidesToShow: `${width > 768 ? 7 : 3}`,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -15,7 +19,7 @@ const Partners = () => {
   return (
     <div className=" my-4 md:w-[90vw] mx-auto px-8">
       <h2 className="text-3xl font-bold text-center mb-2">Our Partners</h2>
-      <Slider {...settings} >
+      <Slider {...settings}>
         <div className="flex justify-center">
           <img
             className="w-[100px] h-[50px]"
