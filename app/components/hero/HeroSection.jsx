@@ -11,8 +11,10 @@ const HeroSection = () => {
           }}
         >
           <img
-            src="https://latium.org/assets/images/png-images/index/freelancing.png"
-            className="shadow-2xl  md:h-[500px] md:min-w-[500px]"
+            src="img/hero.gif"
+            className="  md:h-[500px] md:min-w-[
+            object-cover object-center 
+            "
           />
         </div>
         <div className="mt-2 md:mt-0">
