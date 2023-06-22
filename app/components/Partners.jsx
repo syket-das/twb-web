@@ -12,8 +12,8 @@ const Partners = () => {
     slidesToShow: `${width > 768 ? 7 : 3}`,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 1000,
+    autoplaySpeed: 1000,
     cssEase: 'linear',
   };
   return (
