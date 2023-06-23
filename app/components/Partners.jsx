@@ -17,7 +17,7 @@ const Partners = () => {
     cssEase: 'linear',
   };
   return (
-    <div className=" my-4 md:w-[90vw] mx-auto px-8">
+    <div className=" my-4 md:w-[90vw] mx-auto px-8  ">
       <h2 className="text-3xl font-bold text-center mb-2">Our Partners</h2>
       <Slider {...settings}>
         <div className="flex justify-center">

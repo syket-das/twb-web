@@ -31,7 +31,7 @@ const HeaderComponent = () => {
         <div className="dropdown dropdown-end z-10">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src="https://avatars.dicebear.com/api/avataaars/1.svg" />
+              <img src="/img/user.svg" />
             </div>
           </label>
           <ul
