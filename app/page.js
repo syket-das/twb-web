@@ -1,4 +1,6 @@
+import Categories from './components/Categories';
 import Partners from './components/Partners';
+import ProcessFlow from './components/ProcessFlow';
 import HeroSection from './components/hero/HeroSection';
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <Partners />
+      <ProcessFlow />
+      <Categories />
       
     </div>
   );

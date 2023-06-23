@@ -3,18 +3,17 @@ import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 
 const Partners = () => {
-  const [width, setWidth] = React.useState(0);
+  const [width, setWidth] = React.useState(300);
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
   const settings = {
-    infinite: true,
-    slidesToShow: `${width > 768 ? 7 : 3}`,
+    slidesToShow: `${3}`,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 1000,
-    autoplaySpeed: 1000,
     cssEase: 'linear',
+
+    Infinity: true,
   };
   return (
     <div className=" my-4 md:w-[90vw] mx-auto px-8  ">
