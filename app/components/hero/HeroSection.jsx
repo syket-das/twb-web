@@ -5,17 +5,37 @@ const HeroSection = () => {
     <div className="hero bg-base-200  pt-7">
       <div className="hero-content flex-col lg:flex-row-reverse justify-between">
         <div
-          className=" min-h-[100%]"
+          className=" min-h-[100%] relative"
           style={{
             minHeight: '100% !important',
           }}
         >
           <img
             src="img/hero.gif"
-            className="  md:h-[500px] md:min-w-[500px]
+            className="  md:h-[500px] md:min-w-[700px]
             object-cover object-center 
             "
           />
+          <div className="chat chat-start absolute top-5 left-5 animate-pulse">
+            <div className="chat-image avatar">
+              <div className="w-10 rounded-full">
+                <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <div className="chat-bubble">
+              I love TWB, <br />I bought my first phone by working here.
+            </div>
+          </div>
+          <div className="chat chat-end absolute bottom-5 right-5  animate-pulse transition-opacity ">
+            <div className="chat-image avatar">
+              <div className="w-10 rounded-full">
+                <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+            <div className="chat-bubble">
+              It's the best, <br />I got my job done in 2 days.
+            </div>
+          </div>
         </div>
         <div className="mt-2 md:mt-0">
           <div className="">

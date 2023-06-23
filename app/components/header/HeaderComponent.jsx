@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
+import {AiOutlineSearch} from 'react-icons/ai'
 
 const HeaderComponent = () => {
   return (
-    <div
-      className="navbar bg-base-300 h-20 shadow-lg "
-    >
+    <div className="navbar bg-base-300 h-20 shadow-lg ">
       <div className="mr-6 ">
         <a className="btn bg-transparent normal-case text-xl" href="/">
           <Logo /> TWB
@@ -21,7 +20,7 @@ const HeaderComponent = () => {
         </Link>
       </div>
       <div className="flex-none gap-2 ms-auto">
-        <div className="form-control hidden md:block">
+        <div className="form-control hidden md:block ">
           <input
             type="text"
             placeholder="Search for services"
