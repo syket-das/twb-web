@@ -107,6 +107,7 @@ const Partners = () => {
           />
         </div>
       </Slider>
+      <div className="divider"></div>
     </div>
   );
 };

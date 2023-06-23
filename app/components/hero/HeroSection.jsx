@@ -18,21 +18,21 @@ const HeroSection = () => {
           />
           <div className="chat chat-start absolute top-5 left-5 animate-pulse">
             <div className="chat-image avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-5 rounded-full">
                 <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </div>
-            <div className="chat-bubble">
+            <div className="chat-bubble text-xs ">
               I love TWB, <br />I bought my first phone by working here.
             </div>
           </div>
           <div className="chat chat-end absolute bottom-5 right-5  animate-pulse transition-opacity ">
             <div className="chat-image avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-5 rounded-full">
                 <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </div>
-            <div className="chat-bubble">
+            <div className="chat-bubble text-xs">
               It's the best, <br />I got my job done in 2 days.
             </div>
           </div>
