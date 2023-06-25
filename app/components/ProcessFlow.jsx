@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProcessFlow = () => {
   return (
-    <div className="container px-8 my-8 mx-auto">
+    <div className="container px-8 my-16 mx-auto md:max-w-[80vw]">
       <h2 className="text-3xl font-bold text-center mb-2">
         Your Job Our Responsibility
       </h2>
@@ -25,7 +25,7 @@ const ProcessFlow = () => {
           <h3 className="mb-2 text-xl font-bold leading-none sm:text-2xl">
             Choose Freelancer
           </h3>
-          <p className="text-sm text-center text-gray-500 sm:text-base">
+          <p className="text-sm  text-gray-500 sm:text-base text-justify break-all">
             Browse freelancer profiles, chat in real-time and compare proposals
             to find the best fit for your job. You can also choose to post a job
             and let the freelancers contact you.
@@ -47,7 +47,7 @@ const ProcessFlow = () => {
           <h3 className="mb-2 text-xl font-bold leading-none sm:text-2xl">
             Payment Protection
           </h3>
-          <p className="text-sm text-center text-gray-500 sm:text-base">
+          <p className="text-sm text-justify text-gray-500 sm:text-base break-all">
             Only pay for work when it has been completed and you're 100%
             satisfied. Pay safely using our Milestone Payment system - release
             payments according to a schedule of goals you set, or pay only upon
@@ -70,7 +70,7 @@ const ProcessFlow = () => {
           <h3 className="mb-2 text-xl font-bold leading-none sm:text-2xl">
             Get Work Done
           </h3>
-          <p className="text-sm text-center text-gray-500 sm:text-base">
+          <p className="text-sm text-justify text-gray-500 sm:text-base break-all">
             When you are satisfied with the work, you can approve the work and
             release the payment to the freelancer. Our 24/7 support team is
             available to assist you with any questions you may have.

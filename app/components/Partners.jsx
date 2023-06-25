@@ -16,98 +16,62 @@ const Partners = () => {
     Infinity: true,
   };
   return (
-    <div className=" my-4 md:w-[90vw] mx-auto px-8  ">
-      <h2 className="text-3xl font-bold text-center mb-2">Our Partners</h2>
-      <Slider {...settings}>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/amazon_logo2.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/facebook-corporate-logo2.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/deloitte-logo2.svg"
-            alt="partner"
-          />
-        </div>
+    <>
+      <div className=" my-4 mx-auto px-8 flex justify-center items-center ">
+        <div className="flex justify-center items-center">
+          <h2 className="text-lg font-bold text-center mb-2">Partners</h2>
+          <div className="flex-1 max-w-[80vw] md:mx-5">
+            <div className="flex gap-5 md:gap-16 flex-wrap">
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/amazon_logo2.svg"
+                  alt="partner"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/facebook-corporate-logo2.svg"
+                  alt="partner"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/deloitte-logo2.svg"
+                  alt="partner"
+                />
+              </div>
 
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/nasa-logo3.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/ibm-logo2.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/telstra-logo.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/fujitsu-logo.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/nasa-logo3.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/ibm-logo2.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/facebook-corporate-logo2.svg"
-            alt="partner"
-          />
-        </div>
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/deloitte-logo2.svg"
-            alt="partner"
-          />
-        </div>
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/nasa-logo3.svg"
+                  alt="partner"
+                />
+              </div>
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/ibm-logo2.svg"
+                  alt="partner"
+                />
+              </div>
 
-        <div className="flex justify-center">
-          <img
-            className="w-[100px] h-[50px]"
-            src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/nasa-logo3.svg"
-            alt="partner"
-          />
+              <div className="flex justify-center">
+                <img
+                  className="w-[40px] h-[40px]"
+                  src="https://www.f-cdn.com/assets/main/en/assets/home/redesign/companies/nasa-logo3.svg"
+                  alt="partner"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </Slider>
-      <div className="divider"></div>
-    </div>
+      </div>
+      <div className="divider w-[80vw] mx-auto"></div>
+    </>
   );
 };
 
