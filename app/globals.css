@@ -3,3 +3,21 @@
 @tailwind utilities;
 
 @import 'daisyui/dist/full.css';
+
+
+/* design scrollbar */
+
+::-webkit-scrollbar {
+  /* width: 30px; */
+  @apply bg-gradient-to-b from-indigo-300 from-10% via-sky-300 via-30% to-emerald-300 to-90% w-2;
+}
+
+
+::-webkit-scrollbar-track {
+  @apply  bg-gradient-to-b from-indigo-300 from-10% via-sky-300 via-30% to-emerald-300 to-90% w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-base-100;
+}
+
