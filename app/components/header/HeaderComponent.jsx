@@ -5,9 +5,14 @@ import {AiOutlineSearch} from 'react-icons/ai'
 
 const HeaderComponent = () => {
   return (
-    <div className="navbar bg-base-300 h-20 shadow-lg ">
+    <div
+      className="navbar bg-base-200 h-20 shadow-lg"
+    >
       <div className="mr-6 ">
-        <a className="btn bg-transparent normal-case text-xl" href="/">
+        <a
+          className="btn bg-transparent border-0 outline-0 normal-case text-xl"
+          href="/"
+        >
           <Logo /> TWB
         </a>
       </div>
@@ -35,7 +40,7 @@ const HeaderComponent = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-300 rounded-box w-52"
+            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-300  w-52"
           >
             <li className="mt-2 ">
               <a className="justify-between py-2">Profile</a>
