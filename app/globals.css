@@ -21,3 +21,9 @@
   @apply bg-base-100;
 }
 
+
+
+
+p, div , span{
+  @apply  select-none;
+}

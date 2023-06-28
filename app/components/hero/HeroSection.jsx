@@ -1,6 +1,9 @@
+"use client"
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const HeroSection = () => {
+  const router = useRouter();
   return (
     <div className="hero bg-base-200  pt-7">
       <div className="hero-content flex-col lg:flex-row-reverse justify-between">
@@ -47,7 +50,9 @@ const HeroSection = () => {
             </p>
 
             <div className="">
-              <button className="btn btn-neutral h-[55px]">
+              <button className="btn btn-neutral h-[55px]"
+              onClick={()=>router.push('/categories')}
+              >
                 Browse Services
               </button>
               <div className="stats shadow bg-transparent">
