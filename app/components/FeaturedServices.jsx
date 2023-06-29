@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import PortfolioCard from './card/PortfolioCard';
 
 const FeaturedServices = () => {
   return (
@@ -11,24 +12,25 @@ const FeaturedServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
             return (
-              <div
-                key={index}
-                className="card  w-full bg-base-100 shadow-xl image-full "
-              >
-                <figure>
-                  <img
-                    src="https://daisyui.com//images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                    alt="Shoes"
-                  />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                  <div className="card-actions justify-end">
-                    <button className="btn glass">Buy Now</button>
-                  </div>
-                </div>
-              </div>
+              // <div
+              //   key={index}
+              //   className="card  w-full bg-base-100 shadow-xl image-full "
+              // >
+              //   <figure>
+              //     <img
+              //       src="https://daisyui.com//images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+              //       alt="Shoes"
+              //     />
+              //   </figure>
+              //   <div className="card-body">
+              //     <h2 className="card-title">Shoes!</h2>
+              //     <p>If a dog chews shoes whose shoes does he choose?</p>
+              //     <div className="card-actions justify-end">
+              //       <button className="btn glass">Buy Now</button>
+              //     </div>
+              //   </div>
+              // </div>
+              <PortfolioCard key={index} />
             );
           })}
         </div>

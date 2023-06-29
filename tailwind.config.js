@@ -6,5 +6,5 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [require('@tailwindcss/typography'),'@tailwindcss/forms', require('daisyui')],
 };
