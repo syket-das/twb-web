@@ -10,23 +10,23 @@ const CategoryPage = () => {
       <div className="text-sm breadcrumbs">
         <ul>
           <li>
-            <a href='/'>Dashboard</a>
+            <a href="/">Dashboard</a>
           </li>
           <li>
-            <a href='/categories'>Categories</a>
+            <a href="/categories">Categories</a>
           </li>
           <li>{categoryId}</li>
         </ul>
       </div>
       <div className="grid grid-cols-12 gap-4 mt-6">
         <div className="col-span-12   p-4">
-          <div className="flex justify-between items-center ">
-            <h1 className="text-3xl font-extrabold ">Category {categoryId}</h1>
-            <div className="flex gap-4 items-center ">
+          <div className="flex justify-between items-center flex-col md:flex-row gap-4 ">
+            <h1 className="text-3xl font-extrabold  ">Category {categoryId}</h1>
+            <div className="flex gap-4 items-center justify-between ">
               <input
                 type="text"
                 placeholder="Type here"
-                className="input  border-gray-500 w-full w-xs md:w-96"
+                className="input  border-gray-500 w-full md:w-96"
               />
               <div className="form-control">
                 <label className="label cursor-pointer">
@@ -36,8 +36,8 @@ const CategoryPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-4 my-4 items-center">
-            <div className="form-control w-full">
+          <div className="flex gap-4 my-4 items-center flex-wrap">
+            <div className="form-control w-full md:max-w-[300px]">
               <label className="label">
                 <span className="label-text">Sort by</span>
               </label>
@@ -50,7 +50,7 @@ const CategoryPage = () => {
                 <option>Best selling</option>
               </select>
             </div>
-            <div className="form-control w-full ">
+            <div className="form-control w-full md:max-w-[300px] ">
               <label className="label">
                 <span className="label-text">Price</span>
               </label>
@@ -65,7 +65,7 @@ const CategoryPage = () => {
                 <option>100000 - 1000000</option>
               </select>
             </div>
-            <div className="form-control w-full">
+            <div className="form-control w-full md:max-w-[300px]">
               <label className="label">
                 <span className="label-text">Country</span>
               </label>
@@ -80,7 +80,7 @@ const CategoryPage = () => {
                 <option>France</option>
               </select>
             </div>
-            <div className="form-control w-full ">
+            <div className="form-control w-full md:max-w-[300px] ">
               <label className="label">
                 <span className="label-text">Status</span>
               </label>
@@ -92,7 +92,7 @@ const CategoryPage = () => {
                 <option>Un verified</option>
               </select>
             </div>
-            <div className="form-control w-full ">
+            <div className="form-control w-full md:max-w-[300px] ">
               <label className="label">
                 <span className="label-text">Language</span>
               </label>
