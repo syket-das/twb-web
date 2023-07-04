@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
-import {AiOutlineSearch} from 'react-icons/ai'
 
 const HeaderComponent = () => {
   return (
