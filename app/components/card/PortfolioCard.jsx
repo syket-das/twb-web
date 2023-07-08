@@ -24,7 +24,7 @@ const PortfolioCard = () => {
         </span>
 
         <span className="text-sm text-gray-500 dark:text-gray-400">
-          Starting from <b className="text-white"> $1000</b>
+          Starting from <b className=""> $1000</b>
         </span>
         <div className="flex items-center gap-2 mt-4 ">
           <div className="rating rating-xs">
