@@ -9,29 +9,13 @@ const FeaturedServices = () => {
         <h2 className="text-3xl font-bold text-center mb-12">
           Featured Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+        <div
+          className="
+          flex justify-center gap-4 flex-wrap
+        "
+        >
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
-            return (
-              // <div
-              //   key={index}
-              //   className="card  w-full bg-base-100 shadow-xl image-full "
-              // >
-              //   <figure>
-              //     <img
-              //       src="https://daisyui.com//images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              //       alt="Shoes"
-              //     />
-              //   </figure>
-              //   <div className="card-body">
-              //     <h2 className="card-title">Shoes!</h2>
-              //     <p>If a dog chews shoes whose shoes does he choose?</p>
-              //     <div className="card-actions justify-end">
-              //       <button className="btn glass">Buy Now</button>
-              //     </div>
-              //   </div>
-              // </div>
-              <PortfolioCard key={index} />
-            );
+            return <PortfolioCard key={index} />;
           })}
         </div>
         <div className=" mt-8 flex justify-center ">

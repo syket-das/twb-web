@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
@@ -25,7 +25,7 @@ const HeroSection = () => {
                 <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </div>
-            <div className="chat-bubble text-xs ">
+            <div className="chat-bubble text-xs bg-base-300 text-black ">
               I love TWB, <br />I bought my first phone by working here.
             </div>
           </div>
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 <img src="https://daisyui.com//images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </div>
-            <div className="chat-bubble text-xs">
+            <div className="chat-bubble text-xs bg-base-300 text-black">
               It's the best, <br />I got my job done in 2 days.
             </div>
           </div>
@@ -50,12 +50,13 @@ const HeroSection = () => {
             </p>
 
             <div className="">
-              <button className="btn btn-neutral h-[55px]"
-              onClick={()=>router.push('/categories')}
+              <button
+                className="btn btn-primary h-[55px]"
+                onClick={() => router.push('/categories')}
               >
                 Browse Services
               </button>
-              <div className="stats shadow bg-transparent">
+              <div className="stats  bg-transparent">
                 <div className="stat">
                   <div className="stat-value ">89,400</div>
                   <div className="stat-title ">Service Listed</div>
@@ -70,10 +71,14 @@ const HeroSection = () => {
               for clients.
             </p>
             <div className="">
-              <button className="btn btn-neutral h-[55px]">
+              <button
+                className="btn 
+                btn-accent
+              h-[55px]"
+              >
                 Start Freelancing
               </button>
-              <div className="stats shadow bg-transparent">
+              <div className="stats  bg-transparent">
                 <div className="stat">
                   <div className="stat-value">89,400</div>
                   <div className="stat-title">Projects Done</div>

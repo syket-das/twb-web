@@ -4,17 +4,26 @@ import { Logo } from './Logo';
 
 const HeaderComponent = () => {
   return (
-    <div className="navbar bg-base-300 h-20 shadow-lg ">
+    <div
+      className="navbar bg-base-200 h-20 
+      border-b border-gray-300
+    "
+    >
       <div className="mr-6 ">
-        <a className="btn bg-transparent normal-case text-xl" href="/">
+        <a
+          className="btn bg-transparent border-0 normal-case text-xl
+          hover:bg-transparent hover:border-0 hover:text-xl
+        "
+          href="/"
+        >
           <Logo /> TWB
         </a>
       </div>
       <div className=" hidden  gap-2 md:block">
-        <Link href="/" className="btn btn-ghost  h-10">
+        <Link href="/" className="btn   h-10">
           Dashboard
         </Link>
-        <Link href="/services" className="btn btn-ghost  h-10">
+        <Link href="/services" className="btn   h-10">
           Find Services
         </Link>
       </div>
@@ -23,7 +32,8 @@ const HeaderComponent = () => {
           <input
             type="text"
             placeholder="Search for services"
-            className="input input-bordered  md:w-auto h-10 "
+            className="input  md:w-[300px] h-10 
+            "
           />
         </div>
         <div className="dropdown dropdown-end z-10">
@@ -34,7 +44,7 @@ const HeaderComponent = () => {
           </label>
           <ul
             tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-300 rounded-box w-52"
+            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li className="mt-2 ">
               <a className="justify-between py-2">Profile</a>

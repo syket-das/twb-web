@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html data-theme="dark" lang="en">
+    <html data-theme="light" lang="en">
       <body className="font-mono">
         <Providers>
           <HeaderComponent />

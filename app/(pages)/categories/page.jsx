@@ -203,15 +203,15 @@ const page = () => {
         <div className="flex justify-center flex-col gap-16 mt-8">
           <form>
             <div className="flex items-center gap-4">
-              <h1 className="text-lg md:text-2xl mb-4 font-extrabold text-white">
+              <h1 className="text-lg md:text-2xl mb-4 font-extrabold ">
                 Categories
               </h1>
-              <p className="text-gray-400">{categories.length} available </p>
+              <p className="text-gray-500">{categories.length} available </p>
             </div>
 
             <label
               htmlFor="search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only "
             >
               Search
             </label>
