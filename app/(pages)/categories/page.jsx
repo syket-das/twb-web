@@ -219,7 +219,7 @@ const page = () => {
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  className="w-5 h-5 text-gray-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -254,8 +254,8 @@ const page = () => {
               <div
                 onClick={() => router.push(`/categories/${category.id}`)}
                 key={category.id}
-                className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
-              hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-500 cursor-pointer
+                className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow 
+              hover:shadow-lg hover:border-gray-300 cursor-pointer
               "
               >
                 <a href="#">

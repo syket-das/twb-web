@@ -1,10 +1,26 @@
 import React from 'react';
 import TabComponent from '../TabComponent';
+import { RiProfileLine } from 'react-icons/ri';
+import { BsChatDots } from 'react-icons/bs';
 
 const MiniProfile = () => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row ">
+        <div className="flex md:flex-row-reverse gap-6 mb-4 md:mb-0">
+          <button className="btn  glass">
+            <div className="gap-2 flex items-center">
+              <RiProfileLine size={24} />
+              Profile
+            </div>
+          </button>
+          <button className="btn  glass">
+            <div className="gap-2 flex items-center">
+              <BsChatDots size={24} />
+              Chat
+            </div>
+          </button>
+        </div>
         <div className="w-full lg:w-1/4">
           <img
             src="https://picsum.photos/200"
@@ -13,11 +29,16 @@ const MiniProfile = () => {
           />
         </div>
 
-        <div className="w-full lg:w-3/4">
+        <div className="w-full lg:w-3/4 mt-2">
           <div className="flex flex-col md:flex-row  justify-between">
             <div className="">
-              <div className="flex flex-col mb-4">
-                <span className="font-bold">John Doe J</span>
+              <div className="flex flex-col mb-4 ">
+                <span className="font-bold">
+                  John Doe J
+                  <badge className="badge badge-success badge-md ml-2">
+                    Verified
+                  </badge>
+                </span>
                 <div className="">
                   <span className="text-gray-500">@johndoe</span>
                   <span className="text-gray-500">(Web Developer)</span>
@@ -30,6 +51,10 @@ const MiniProfile = () => {
                 <div className="mt-2">
                   <span className="mr-2">Joined in</span>
                   <span className="">20-10-2023</span>
+                </div>
+                <div className="mt-2">
+                  <span className="mr-2">Preferred Languages</span>
+                  <span className="text-gray-500">Hindi, English</span>
                 </div>
               </div>
             </div>

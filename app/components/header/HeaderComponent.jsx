@@ -47,7 +47,7 @@ const HeaderComponent = () => {
             className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
           >
             <li className="mt-2 ">
-              <a className="justify-between py-2">Profile</a>
+              <a href='/profile' className="justify-between py-2">Profile</a>
             </li>
             <li className="mt-2">
               <a className="justify-between py-2" href="/">
