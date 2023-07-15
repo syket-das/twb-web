@@ -1,7 +1,7 @@
 import './globals.css';
-import Providers from './providers/Providers';
-import HeaderComponent from './components/header/HeaderComponent';
-import FooterComponent from './components/footer/FooterComponent';
+import Providers from '../providers/Providers';
+import HeaderComponent from '../components/header/HeaderComponent';
+import FooterComponent from '../components/footer/FooterComponent';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 export const metadata = {

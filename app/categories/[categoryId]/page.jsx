@@ -1,5 +1,5 @@
 'use client';
-import PortfolioCard from '@/app/components/card/PortfolioCard';
+import PortfolioCard from '@/components/card/PortfolioCard';
 import { useParams } from 'next/navigation';
 import React from 'react';
 const CategoryPage = () => {

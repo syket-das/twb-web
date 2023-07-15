@@ -7,15 +7,13 @@ const ToggleTheme = () => {
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.theme);
 
-//   useEffect(() => {
-//     const body = document.body;
-//     body.setAttribute('data-theme', theme);
-//   }, [theme]);
+  //   useEffect(() => {
+  //     const body = document.body;
+  //     body.setAttribute('data-theme', theme);
+  //   }, [theme]);
 
   return (
-    <div
-        className="flex items-center justify-center gap-2"
-    >
+    <div className="flex items-center justify-center gap-2">
       <label className="swap swap-rotate">
         {/* this hidden checkbox controls the state */}
         <input

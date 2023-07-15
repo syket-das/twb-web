@@ -6,21 +6,21 @@ import { BsChatDots } from 'react-icons/bs';
 const MiniProfile = () => {
   return (
     <div>
+      <div className="flex flex-row-reverse gap-6 mb-4 md:mb-0">
+        <button className="btn  glass">
+          <div className="gap-2 flex items-center">
+            <RiProfileLine size={24} />
+            Profile
+          </div>
+        </button>
+        <button className="btn  glass">
+          <div className="gap-2 flex items-center">
+            <BsChatDots size={24} />
+            Chat
+          </div>
+        </button>
+      </div>
       <div className="flex flex-col lg:flex-row ">
-        <div className="flex md:flex-row-reverse gap-6 mb-4 md:mb-0">
-          <button className="btn  glass">
-            <div className="gap-2 flex items-center">
-              <RiProfileLine size={24} />
-              Profile
-            </div>
-          </button>
-          <button className="btn  glass">
-            <div className="gap-2 flex items-center">
-              <BsChatDots size={24} />
-              Chat
-            </div>
-          </button>
-        </div>
         <div className="w-full lg:w-1/4">
           <img
             src="https://picsum.photos/200"

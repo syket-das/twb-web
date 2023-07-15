@@ -1,5 +1,5 @@
 'use client';
-import ClientOnly from '@/app/components/ClientOnly';
+import ClientOnly from '@/components/ClientOnly';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
