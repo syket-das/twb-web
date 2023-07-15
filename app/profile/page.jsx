@@ -1,9 +1,11 @@
-import React from 'react'
+'use client';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  const { userDetails } = useSelector((state) => state.user);
 
-export default page
+  return <div>page</div>;
+};
+
+export default page;

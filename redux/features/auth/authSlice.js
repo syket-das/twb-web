@@ -1,14 +1,8 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { firebase_app } from '@/config/firebase';
+import { createSlice } from '@reduxjs/toolkit';
+import { auth } from '@/config/firebase';
 
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  signOut,
-} from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { store } from '@/redux/store';
-export const auth = getAuth(firebase_app);
 
 const initialState = {
   user: null,

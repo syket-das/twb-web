@@ -62,14 +62,6 @@ const HeaderComponent = () => {
           </Link>
         </div>
         <div className="flex-none gap-2 ms-auto">
-          <div className="form-control hidden md:block ">
-            <input
-              type="text"
-              placeholder="Search for services"
-              className="input  md:w-[300px] h-10 
-            "
-            />
-          </div>
           <div className="dropdown dropdown-end z-10">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -90,7 +82,10 @@ const HeaderComponent = () => {
             >
               <li className="mt-2 ">
                 {user?.email ? (
-                  <a className="flex items-center py-2 flex-wrap" href="/">
+                  <Link
+                    className="flex items-center py-2 flex-wrap"
+                    href={`/profile`}
+                  >
                     <div className="avatar">
                       <div className="w-8 rounded">
                         <img
@@ -100,7 +95,7 @@ const HeaderComponent = () => {
                       </div>
                     </div>{' '}
                     {user?.displayName}
-                  </a>
+                  </Link>
                 ) : (
                   <div
                     className="p-4 btn  flex items-center "
