@@ -7,6 +7,7 @@ import {
   GoogleAuthProvider,
   signOut,
 } from 'firebase/auth';
+import { store } from '@/redux/store';
 export const auth = getAuth(firebase_app);
 
 const initialState = {
@@ -15,26 +16,30 @@ const initialState = {
   error: null,
 };
 
-export const signInWithGoogle = createAsyncThunk(
-  'auth/signInWithGoogle',
-  async (thunkApi) => {
-    try {
-      const provider = new GoogleAuthProvider();
-      const { user } = await signInWithPopup(auth, provider);
-      return user;
-    } catch (error) {
-      return thunkApi.rejectWithValue(error);
-    }
-  }
-);
-
-export const logOut = createAsyncThunk('auth/logOut', async (thunkApi) => {
+export const signInWithGoogle = async () => {
   try {
-    await signOut(auth);
+    const provider = new GoogleAuthProvider();
+    store.dispatch(setLoading(true));
+    const result = await signInWithPopup(auth, provider);
+    store.dispatch(setLoading(false));
+    return store.dispatch(setUser(result.user));
   } catch (error) {
-    return thunkApi.rejectWithValue(error);
+    store.dispatch(setLoading(false));
+    return store.dispatch(setError(error));
   }
-});
+};
+
+export const logOut = async () => {
+  try {
+    store.dispatch(setLoading(true));
+    await signOut(auth);
+    store.dispatch(setLoading(false));
+    return store.dispatch(setUser(null));
+  } catch (error) {
+    store.dispatch(setLoading(false));
+    return store.dispatch(setError(error));
+  }
+};
 
 const authSlice = createSlice({
   name: 'auth',
@@ -47,35 +52,21 @@ const authSlice = createSlice({
     setLoading(state, action) {
       state.loading = action.payload;
     },
-  },
 
-  extraReducers: (builder) => {
-    builder.addCase(signInWithGoogle.pending, (state, action) => {
-      state.loading = true;
-    });
-    builder.addCase(signInWithGoogle.fulfilled, (state, action) => {
-      state.loading = false;
-      state.user = action.payload;
-    });
-    builder.addCase(signInWithGoogle.rejected, (state, action) => {
-      state.loading = false;
-      state.error = 'Sign in with Google failed';
-    });
+    setError(state, action) {
+      state.error = action.payload.code || action.payload.message || null;
 
-    builder.addCase(logOut.pending, (state, action) => {
-      state.loading = true;
-    });
-    builder.addCase(logOut.fulfilled, (state, action) => {
-      state.loading = false;
-      state.user = null;
-    });
-    builder.addCase(logOut.rejected, (state, action) => {
-      state.loading = false;
-      state.error = action.payload.message;
-    });
+      setTimeout(() => {
+        store.dispatch(clearError());
+      }, 5000);
+    },
+
+    clearError(state) {
+      state.error = null;
+    },
   },
 });
 
-export const { setUser } = authSlice.actions;
+export const { setUser, setLoading, setError, clearError } = authSlice.actions;
 
 export default authSlice.reducer;

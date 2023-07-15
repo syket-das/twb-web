@@ -6,6 +6,7 @@ import { firebase_app } from '@/config/firebase';
 import { useEffect } from 'react';
 import { logOut, setUser } from '@/redux/features/auth/authSlice';
 import { Toaster } from 'react-hot-toast';
+import Loading from '@/components/Loading';
 export default function Providers({ children }) {
   return (
     <>
@@ -19,7 +20,7 @@ export default function Providers({ children }) {
 
 const Wrapper = ({ children }) => {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
+  const { user, loading } = useSelector((state) => state.auth);
 
   const auth = getAuth(firebase_app);
 
@@ -35,11 +36,11 @@ const Wrapper = ({ children }) => {
           })
         );
       } else {
-        dispatch(logOut());
+        logOut();
       }
     });
 
     return () => unsubscribe();
   }, []);
-  return <>{children}</>;
+  return <>{loading ? <Loading /> : children}</>;
 };

@@ -25,13 +25,13 @@ const HeaderComponent = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(signInWithGoogle());
+    signInWithGoogle();
     setIsOpen(false);
   };
 
   const handleLogout = (e) => {
     e.preventDefault();
-    dispatch(logOut());
+    logOut();
 
     toast.success('Logged out successfully');
   };
@@ -89,12 +89,26 @@ const HeaderComponent = () => {
               className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               <li className="mt-2 ">
-                <div
-                  className="p-4 btn  flex items-center "
-                  onClick={() => setIsOpen(true)}
-                >
-                  Login
-                </div>
+                {user?.email ? (
+                  <a className="flex items-center py-2 flex-wrap" href="/">
+                    <div className="avatar">
+                      <div className="w-8 rounded">
+                        <img
+                          src={user?.photoURL}
+                          alt="Tailwind-CSS-Avatar-component"
+                        />
+                      </div>
+                    </div>{' '}
+                    {user?.displayName}
+                  </a>
+                ) : (
+                  <div
+                    className="p-4 btn  flex items-center "
+                    onClick={() => setIsOpen(true)}
+                  >
+                    Login
+                  </div>
+                )}
               </li>
               <li className="mt-2">
                 <a className="justify-between py-2" href="/">
