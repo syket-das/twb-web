@@ -23,7 +23,7 @@ export const options = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        dbConnect();
+        await dbConnect();
 
         if (!credentials.username || !credentials.password) {
           return null;
