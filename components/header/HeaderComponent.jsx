@@ -13,9 +13,22 @@ const HeaderComponent = ({ session }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async (e) => {
+  const googleLogin = async (e) => {
     e.preventDefault();
-    await signIn('github', { redirect: false });
+    await signIn('google', {
+      callbackUrl: `/`,
+
+    });
+
+    setIsOpen(false);
+  };
+
+  const githubLogin = async (e) => {
+    e.preventDefault();
+    await signIn('github', {
+      callbackUrl: `/`,
+    });
+
     setIsOpen(false);
   };
 
@@ -213,12 +226,12 @@ const HeaderComponent = ({ session }) => {
             <div className="divider">OR</div>
             <div className="flex flex-wrap -mx-3 mb-2">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <button className="btn  w-full " onClick={handleLogin}>
+                <button className="btn  w-full " onClick={googleLogin}>
                   Login With Google
                 </button>
               </div>
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <button className="btn  w-full " onClick={handleLogin}>
+                <button className="btn  w-full " onClick={githubLogin}>
                   Login With Github
                 </button>
               </div>
