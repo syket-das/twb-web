@@ -7,12 +7,15 @@ import { useEffect } from 'react';
 import { logOut, setUser } from '@/redux/features/auth/authSlice';
 import { Toaster } from 'react-hot-toast';
 import Loading from '@/components/Loading';
+import { SessionProvider } from 'next-auth/react';
 export default function Providers({ children }) {
   return (
     <>
       <Provider store={store}>
         <Toaster position="top-center" reverseOrder={false} />
-        <Wrapper>{children}</Wrapper>
+        <Wrapper>
+          <SessionProvider refetchInterval={5 * 60}>{children}</SessionProvider>
+        </Wrapper>
       </Provider>
     </>
   );
