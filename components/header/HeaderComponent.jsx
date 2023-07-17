@@ -6,12 +6,60 @@ import DialogComponent from '../DialogComponent';
 import { toast } from 'react-hot-toast';
 import { signIn, signOut } from 'next-auth/react';
 import { BsBell, BsChatSquareText } from 'react-icons/bs';
+import axios from 'axios';
 
 const HeaderComponent = ({ session }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [data, setData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const onchange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const register = async (e) => {
+    e.preventDefault();
+
+    if (data.password !== data.confirmPassword) {
+      toast.error('Passwords does not match');
+      return;
+    }
+
+    if (data.password.length < 6) {
+      toast.error('Password must be atleast 6 characters');
+      return;
+    }
+
+    if (!data.name || !data.email || !data.password || !data.confirmPassword) {
+      toast.error('Please fill all the fields');
+      return;
+    }
+
+    try {
+      const res = await axios.post('/api/register', {
+        name: data.name,
+        email: data.email,
+        password: data.password,
+      });
+
+      toast.success('Registered successfully');
+      setIsRegisterOpen(false);
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 100);
+    } catch (error) {
+      toast.error('Something went wrong');
+    }
+  };
 
   const googleLogin = async (e) => {
     e.preventDefault();
@@ -38,7 +86,7 @@ const HeaderComponent = ({ session }) => {
     await signIn('credentials', {
       username: email,
       password: password,
-      redirect: false,
+      redirect: true,
     });
     setIsOpen(false);
   };
@@ -214,7 +262,15 @@ const HeaderComponent = ({ session }) => {
             </div>
             <p className="text-gray-700">
               Dont have account?{' '}
-              <span className="text-blue-400 hover:underline cursor-pointer">
+              <span
+                className="text-blue-400 hover:underline cursor-pointer"
+                onClick={() => {
+                  setIsOpen(false);
+                  setTimeout(() => {
+                    setIsRegisterOpen(true);
+                  }, 100);
+                }}
+              >
                 Sign Up
               </span>{' '}
             </p>
@@ -228,6 +284,138 @@ const HeaderComponent = ({ session }) => {
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <button className="btn  w-full " onClick={githubLogin}>
                   Login With Github
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </DialogComponent>
+
+      {/* ------ */}
+
+      <DialogComponent
+        isOpen={isRegisterOpen}
+        setIsOpen={setIsRegisterOpen}
+        title={'Welcome To The Work Bazar'}
+        subtitle={'Create your account and start your journey with us!'}
+      >
+        <form className="w-full mt-8">
+          <div className="flex flex-wrap -mx-3 ">
+            <div className="w-full  px-3  ">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-first-name"
+              >
+                Full Name
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                name="name"
+                type="text"
+                placeholder="Jane"
+                value={data.name}
+                onChange={onchange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3">
+            <div className="w-full  px-3">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-first-name"
+              >
+                Email
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                name="email"
+                type="text"
+                placeholder="Jane@example.com"
+                value={data.email}
+                onChange={onchange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row  -mx-3">
+            <div className="flex-1 px-3 ">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                Password
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="password"
+                type="password"
+                placeholder="******************"
+                value={data.password}
+                onChange={onchange}
+              />
+            </div>
+            <div className="flex-1 px-3 ">
+              <label
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                htmlFor="grid-password"
+              >
+                Confirm Password
+              </label>
+              <input
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="confirmPassword"
+                type="password"
+                placeholder="******************"
+                value={data.confirmPassword}
+                onChange={onchange}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap -mx-3 mb-6"></div>
+          <div className="flex items-center justify-between mb-4">
+            <div className="form-control">
+              <label className="label cursor-pointer flex gap-4">
+                <input type="checkbox" checked="checked" className="checkbox" />
+                <span className="label-text">
+                  Agree to{' '}
+                  <a href="#" className="text-blue-500 hover:underline">
+                    {' '}
+                    Terms and Conditions
+                  </a>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full border-opacity-50">
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <button className="btn btn-accent w-full " onClick={register}>
+                Register Now
+              </button>
+            </div>
+            <p className="text-gray-700">
+              Already have account?{' '}
+              <span
+                className="text-blue-400 hover:underline cursor-pointer"
+                onClick={() => {
+                  setIsRegisterOpen(false);
+                  setTimeout(() => {
+                    setIsOpen(true);
+                  }, 100);
+                }}
+              >
+                Sign In
+              </span>{' '}
+            </p>
+            <div className="divider">OR</div>
+            <div className="flex flex-wrap -mx-3 mb-2">
+              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <button className="btn  w-full " onClick={googleLogin}>
+                  Join With Google
+                </button>
+              </div>
+              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <button className="btn  w-full " onClick={githubLogin}>
+                  Join With Github
                 </button>
               </div>
             </div>

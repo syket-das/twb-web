@@ -38,7 +38,9 @@ const DialogComponent = ({ title, subtitle, children, isOpen, setIsOpen }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full lg:max-w-[60vw] max-h-[80vh] transform overflow-x-hidden overflow-y-auto rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full lg:max-w-[60vw] max-h-[80vh] transform overflow-x-hidden overflow-y-auto rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+                  
+                >
                   <div className="w-full flex justify-end">
                     <button
                       type="button"
