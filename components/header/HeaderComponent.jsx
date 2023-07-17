@@ -15,7 +15,7 @@ const HeaderComponent = ({ session }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    await signIn('github', { redirect: true });
+    await signIn('github', { redirect: false });
     setIsOpen(false);
   };
 
@@ -30,7 +30,7 @@ const HeaderComponent = ({ session }) => {
     await signIn('credentials', {
       username: email,
       password: password,
-      redirect: true,
+      redirect: false,
     });
     setIsOpen(false);
   };
