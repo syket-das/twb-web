@@ -15,19 +15,14 @@ const HeaderComponent = ({ session }) => {
 
   const googleLogin = async (e) => {
     e.preventDefault();
-    await signIn('google', {
-      callbackUrl: `/`,
-
-    });
+    await signIn('google');
 
     setIsOpen(false);
   };
 
   const githubLogin = async (e) => {
     e.preventDefault();
-    await signIn('github', {
-      callbackUrl: `/`,
-    });
+    await signIn('github');
 
     setIsOpen(false);
   };
