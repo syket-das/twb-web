@@ -1,11 +1,7 @@
-"use client"
-import { getUserDetails } from '@/redux/features/user/userSlice';
-import React, {   } from 'react';
+'use client';
+import React from 'react';
 
 const UserProfile = () => {
-
-
-
   return (
     <div>
       <div className="h-56 bg-base-200 relative">

@@ -18,82 +18,11 @@ const sellerDetailsSchema = new mongoose.Schema(
         experience: {
           type: String,
           required: true,
+          enum: ['Beginner', 'Intermidiate', 'Expert'],
         },
 
         description: {
           type: String,
-        },
-      },
-    ],
-
-    education: [
-      {
-        name: {
-          type: String,
-          required: [true, 'Please add a institute name'],
-        },
-
-        degree: {
-          type: String,
-          required: [true, 'Please add a degree'],
-        },
-
-        fieldOfStudy: {
-          type: String,
-          required: [true, 'Please add a field of study'],
-        },
-
-        grade: {
-          type: String,
-          required: [true, 'Please add a grade'],
-        },
-
-        startYear: {
-          type: Number,
-          required: [true, 'Please add a start year'],
-        },
-
-        endYear: {
-          type: Number,
-          required: [true, 'Please add a end year or expected year'],
-        },
-      },
-    ],
-
-    certifications: [
-      {
-        name: {
-          type: String,
-          required: [true, 'Please add a certification name'],
-        },
-
-        organization: {
-          type: String,
-          required: [true, 'Please add a organization name'],
-        },
-
-        issueDate: {
-          type: Date,
-          required: [true, 'Please add a issue date'],
-        },
-
-        description: {
-          type: String,
-        },
-      },
-    ],
-
-    languages: [
-      {
-        name: {
-          type: String,
-          required: [true, 'Please add a language name'],
-        },
-
-        proficiency: {
-          type: String,
-          required: [true, 'Please add a proficiency'],
-          enum: ['Basic', 'Conversational', 'Fluent', 'Native or Bilingual'],
         },
       },
     ],
@@ -111,6 +40,9 @@ const sellerDetailsSchema = new mongoose.Schema(
         },
 
         link: {
+          type: String,
+        },
+        code: {
           type: String,
         },
       },

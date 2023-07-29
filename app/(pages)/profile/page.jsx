@@ -23,6 +23,7 @@ import { GoEyeClosed } from 'react-icons/go';
 import BasicDetails from './forms/BasicDetails';
 import Photo from './forms/Photo';
 import SellerProfile from './forms/SellerProfile';
+import Security from './forms/Security';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -178,6 +179,9 @@ const page = () => {
             </Tab.Panel>
             <Tab.Panel>
               <SellerProfile />
+            </Tab.Panel>
+            <Tab.Panel>
+              <Security />
             </Tab.Panel>
           </Tab.Panels>
         </div>
